@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+@NOTES
+if the above are squigly and give the error:
+"Unkowns at rule @tailwind"
+add this to workspace settings.json:
+
+{
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.emmetCompletions": true,
+}
+*/
+
+:root {
+  --background-rgb: 20, 20, 20;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: white;
+  background: rgb(var(--background-rgb));
+}
